@@ -5,6 +5,8 @@ const Cart = () => {
  const data =  useContext(CartCon)
  console.log(data.Items, "itemzzzz")
  const total = data.Items.reduce((a,b)=> a + b.price, 0)
+ console.log(typeof total, "totalll")
+
   return (
     <>
     <h1>Cart</h1>
@@ -15,7 +17,7 @@ const Cart = () => {
 
 
 <h2>Total Amount: ${total} </h2>
-<button onClick={()=>location.reload()} > Clear Cart </button>
+<button disabled={total === 0} onClick={()=>location.reload()} > Clear Cart </button>
     </>
   )
 }
