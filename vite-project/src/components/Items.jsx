@@ -13,6 +13,8 @@ const Items = (props) => {
     <button onClick={()=>{
         cart.setItems([...cart.Items, {name:props.name, price:props.price}])
     }}>Add To Cart</button>
+
+    
     </>
   )
 }

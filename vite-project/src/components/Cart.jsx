@@ -15,6 +15,7 @@ const Cart = () => {
 
 
 <h2>Total Amount: ${total} </h2>
+<button onClick={()=>location.reload()} > Clear Cart </button>
     </>
   )
 }
